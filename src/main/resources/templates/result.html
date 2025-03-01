@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>Result</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <h1>Result</h1>
+        <div th:each="article : ${articles}">
+            <p th:text="'id: ' + ${article.id}" />
+            <p th:text="'title: ' + ${article.title}"></p>
+            <p th:text="'content: ' + ${article.content}" />
+        </div>
+        <a href="/create">Submit another message</a>
+    </body>
+</html>
