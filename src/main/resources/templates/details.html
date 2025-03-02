@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Article Details</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" th:href="@{/styles.css}" />
+</head>
+<body>
+
+<div class="container">
+    <div class="article-details-card">
+        <h1 class="article-title" th:text="${article.title}"></h1>
+        <p class="article-date" th:text="${#temporals.format(article.publicationDate, 'dd MMMM, yyyy')}"></p>
+        <div class="article-content">
+            <p th:text="${article.content}"></p>
+        </div>
+
+        <div class="button-group">
+            <a href="/home">
+                <button class="back-btn">Back to Articles</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
